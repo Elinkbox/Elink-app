@@ -1,10 +1,4 @@
-// // Setup Azure Cosmos DB Configuration
-// const cosmosDbConfig = {
-//     endpoint: "https://elinkbox-test.documents.azure.com:443/", // Replace with your Cosmos DB endpoint
-//     key: "4qf0jeSn61TURCSKRpy4O3mMUA71hXPuI9BHwQ5niD71qTeEUf4sP0wxvOGh2UPI5giUEWL5zqYPACDbwhPYxA==",           // Replace with your Cosmos DB key
-//     databaseId: "ElinkDB",      // Replace with your database ID
-//     containerId: "Devices"     // Replace with your container ID
-//   };
+
 
 const express = require('express');
 const path = require('path');
@@ -14,10 +8,12 @@ const session = require('express-session');
 const crypto = require('crypto');
 const fs = require('fs');
 const cron = require('node-cron');
+// Load environment variables from the .env file
+require('dotenv').config();
 
 // Replace these values with your actual Cosmos DB account details
-const endpoint = 'https://elinkbox.documents.azure.com:443/';
-const key = 'h1wn3Ovml7H5nviF2qCyKtfUOrifwJi7btu0qsHrRKnw1qQdwUWmoCdUTNZ0l8Wllxhi0SVBAx1QACDbRLZ9iw==';
+const endpoint = process.env.SECRET_API_KEY;;
+const key = process.env.AZURE_COSMOSDB_KEY;;
 const databaseId = 'linkboxDB';
 const containerId = 'devices';
 
