@@ -1,0 +1,8 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/822bb072-4f8c-4fb0-9a93-af4c5c53a67d/resourceGroups/Elink-Box/providers/Microsoft.Web/sites/elink-ui",
+    "appService.deploySubpath": ".",
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ]
+}

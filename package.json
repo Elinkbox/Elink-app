@@ -10,11 +10,13 @@
   "description": "",
   "dependencies": {
     "@azure/cosmos": "^4.2.0",
+    "cors": "^2.8.5",
     "crypto": "^1.0.1",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "express-session": "^1.18.1",
     "node-cron": "^3.0.3",
+    "nodemailer": "^6.9.16",
     "path": "^0.12.7",
     "session": "^0.1.0"
   }

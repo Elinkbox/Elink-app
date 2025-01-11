@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #333333;
+    color: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    min-height: 100vh;  /* Ensures body occupies full viewport height */
+    overflow-y: auto;  /* Allow body to scroll */
+  }
+  
+  .logo-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .logo {
+    height: 50px;
+    width: auto;
+    margin-left: 10px;
+  }
+  .title {
+    margin-left: 20px;
+    color: #ecf0f1;
+    font-size: 24px;
+  }
+
+  h1 {
+    color: #ecf0f1;
+    font-size: 28px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  button {
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.2s ease;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+      /* Container for the row with buttons and email field, moved to right */
+      .button-email-container {
+        display: flex;
+        justify-content: space-between; /* Space between buttons and email field */
+        align-items: center;
+        margin-bottom: 20px;
+      }
+  
+      /* Make the email text bigger and more prominent */
+    #emailField {
+      color: #ecf0f1;
+      font-weight: bold;  /* Make the text bold */
+      cursor: pointer;
+      padding: 5px 10px;
+      border-radius: 4px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);  /* Add shadow for emphasis */
+    }
+  
+      #emailInput {
+        font-size: 18px;
+        padding: 5px;
+        color: #ecf0f1;
+        background-color: #444444;
+        border: none;
+        border-radius: 4px;
+        display: none;
+        width: 250px;
+      }
+  
+      #emailField.editable:hover {
+        text-decoration: underline;
+        
+      }
+  
+      .save-cancel-buttons {
+        display: none;
+        gap: 10px;
+      }
+  
+      .save-cancel-buttons button {
+        padding: 5px 10px;
+        font-size: 16px;
+      }
+  
+  .container {
+   
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto; /* Allow content inside container to scroll */
+  }
+  
+  .table-container {
+    height: calc(100vh - 250px); /* Adjust the value (200px) based on the total height of other elements */
+    overflow-y: auto;
+    flex-grow: 1;
+  }
+  
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #444444;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 1px solid #333;
+    font-size: 16px;
+  }
+  
+  th {
+    background-color: #58595b;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .enabled-btn {
+    background-color: #4CAF50;
+    margin: 0 auto;
+  }
+  
+  .disabled-btn {
+    background-color: #f44336;
+    margin: 0 auto;
+  }
+  
+  .delete-btn {
+    color: #f44336;
+    margin: 0 auto;
+  }
+  
+  .enabled-status {
+    color: #4CAF50;
+  }
+  
+  .disabled-status {
+    color: #f44336;
+  }
+  
+  #addDeviceBtn {
+    background-color: grey;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  
+  #addDeviceBtn:hover {
+    background-color: #58595b;
+  }
+  
+  #logoutBtn {
+    background-color: grey;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  
+  #logoutBtn:hover {
+    background-color: #58595b;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: #444444;
+    color: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  .modal-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  
+  .modal-buttons button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  .cancel-btn {
+    background-color: grey;
+  }
+  
+  .confirm-btn {
+    background-color: grey;
+  }
+  
+  .button-container {
+    display: flex;
+    gap: 10px;
+  }
+  
+  td input {
+    padding: 5px;
+    font-size: 14px;
+  }
+  
+  .save-btn {
+    background-color: grey;
+  }
+  
+  .cancel-edit-btn {
+    background-color: grey;
+  }
+  
+  td .editable {
+    cursor: pointer;
+    border-bottom: 1px dashed transparent;
+    transition: border-bottom 0.3s;
+  }
+  
+  td .editable:hover {
+    border-bottom: 1px dashed #ecf0f1;
+  }
+  
+  td .editable:after {
+    color: #7f8c8d;
+    font-size: 12px;
+    margin-left: 5px;
+    visibility: hidden;
+  }
+  
+  td .editable:hover:after {
+    visibility: visible;
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      font-size: 14px; /* Smaller font size for mobile devices */
+    }
+  
+    .logo {
+      height: 40px;
+    }
+  
+    h1 {
+      font-size: 24px; /* Adjust title font size */
+    }
+  
+    .container {
+      padding: 10px; /* Reduced padding for small screens */
+      height: auto;
+    }
+  
+    .table-container {
+      max-height: 500px; /* Reduce max-height for smaller screens */
+    }
+  
+    table th, table td {
+      padding: 8px; /* Reduced padding for better responsiveness */
+      font-size: 14px; /* Adjust font size */
+    }
+  
+    button {
+      padding: 8px 15px; /* Smaller buttons on mobile */
+      font-size: 14px; /* Adjust button font size */
+    }
+  
+    #addDeviceBtn, #logoutBtn {
+      width: 100%; /* Full width buttons on mobile */
+      font-size: 16px;
+    }
+  
+    .button-container {
+      flex-direction: column; /* Stack buttons vertically on mobile */
+    }
+  
+    td .editable {
+      font-size: 12px; /* Smaller font for editable fields */
+    }
+  }
+
+  #passwordInput {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 4px;
+    border: none;
+    background-color: #555;
+    color: #fff;
+  }
+
+  .editable-input {
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 4px;
+    border: none;
+    background-color: #555;
+    color: #fff;
+  }
+  
